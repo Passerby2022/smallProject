@@ -1,0 +1,7 @@
+express                 快速搭建服务器
+cors                    实现数据的跨域访问
+joi                     配置表单验证的规则
+mssql                   实现与SQL Server的连接
+@escook/express-joi     来实现自动对表单数据进行验证的功能
+bcryptjs                对密码进行加密和解密
+xlsx                    实现导出xlsx格式的表格

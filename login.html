@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <!--消除控制台的这个报错GET http://127.0.0.1:5500/favicon.ico 404 (Not Found)-->
+    <link rel="shortcut icon" href="#">
+    <!--导入字体图标-->
+    <link rel="stylesheet" href="./ico/font_4099743_7rbjv95b45w/iconfont.css">
+    <!--导入javasccript第三方包jquery-->
+    <script src="./javascript/jquery.js"></script>
+    <!--导入javasccript第三方包模板引擎art-template-->
+    <script src="./javascript/art-template.js"></script>
+    <script src="./javascript/login.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="box_left">
+            <img src="./image/build2.jpg" alt="">
+            <span>某某公司人事工资管理系统</span>
+        </div>
+        <div class="box_right">
+            <h2>用户登录</h2><span><a href="" id="aIndex"></a></span>
+            <form id="form" method="post" action="#" name="form">
+                <div class="boxform">
+                    <p>用户名：</p>
+                    <input type="text" placeholder=" 请输入用户名" name="userName" id="userName" autocomplete="off">
+                </div>
+                <div class="boxform">
+                    <p>密码：</p>
+                    <input type="password" placeholder=" 请输入密码" name="passWord" id="passWord" autocomplete="off">
+                    <span class="iconfont icon-yanjing_yincang" id="span"></span>
+                </div>
+                <button type="submit" id="submit">登录</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
