@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>某某公司人事工资管理系统</title>
+    <!--导入通用样式-->
+    <link rel="stylesheet" href="../css/index.css">
+    <!--导入特定样式-->
+    <link rel="stylesheet" href="../css/selectPaySS.css">
+    <!--导入字体图标-->
+    <link rel="stylesheet" href="../ico/font_4099743_7rbjv95b45w/iconfont.css">
+    <!--导入javasccript第三方包jquery-->
+    <script src="../javascript/jquery.js"></script>
+    <!--导入javasccript第三方包模板引擎art-template-->
+    <script src="../javascript/art-template.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="box_left">
+            <img src="../image/build.jpg" alt="">
+            <div class="all">
+                <h3><a href="../index.html">全部信息</a></h3>
+            </div>
+            <div class="department">
+                <h3><span class="iconfont icon-yewu-xianxing"></span>部门信息<span class="iconfont icon-icon-test1" id="down"></span></h3>
+                <ul>
+                    <li><a href="../html/addDepartment.html">添加部门信息</a></li>
+                    <li><a href="../html/modifyDepartment.html">修改部门信息</a></li>
+                    <li><a href="../html/selectDepartment.html">查询部门信息</a></li>
+                    <li><a href="../html/deleteDepartment.html">删除部门信息</a></li>
+                </ul>
+            </div>
+            <div class="staff">
+                <h3><span class="iconfont icon-yonghuziliao-xianxing"></span>员工基本信息<span class="iconfont icon-icon-test1" id="down"></span></h3>
+                <ul>
+                    <li><a href="../html/addStaff.html">添加员工信息</a></li>
+                    <li><a href="../html/modifyStaff.html">修改员工信息</a></li>
+                    <li><a href="../html/selectStaff.html">查询员工信息</a></li>
+                    <li><a href="../html/deleteStaff.html">删除员工信息</a></li>
+                </ul>
+            </div>
+            <div class="wages">
+                <h3><span class="iconfont icon-danju-xianxing"></span>人事工资基本信息<span class="iconfont icon-icon-test" id="down"></span></h3>
+                <ul>
+                    <li class="wages_box">
+                        <h4 class="one">工资项目管理<span class="iconfont icon-icon-test1" id="downDown"></span></h4>
+                        <ul>
+                            <li><a href="../html/addPayRTS.html">添加工资信息</a></li>
+                            <li><a href="../html/modifyPayRTS.html">修改工资信息</a></li>
+                            <li><a href="../html/selectPayRTS.html">查询工资信息</a></li>
+                            <li><a href="../html/deletePayRTS.html">删除工资信息</a></li>
+                        </ul>
+                    </li>
+                    <li class="wages_box">
+                        <h4 class="two">工资税率管理<span class="iconfont icon-icon-test1" id="downDown"></span></h4>
+                        <ul>
+                            <li><a href="../html/addPayNS.html">添加工资税率信息</a></li>
+                            <li><a href="../html/modifyPayNS.html">修改工资税率信息</a></li>
+                            <li><a href="../html/selectPayNS.html">查询工资税率信息</a></li>
+                            <li><a href="../html/deletePayNS.html">删除工资税率信息</a></li>
+                        </ul>
+                    </li>
+                    <li class="wages_box">
+                        <h4 class="three">调整工资管理<span class="iconfont icon-icon-test" id="downDown"></span></h4>
+                        <ul>
+                            <li><a href="../html/addPaySS.html">添加调整工资信息</a></li>
+                            <li><a href="../html/modifyPaySS.html">修改调整工资信息</a></li>
+                            <li><a href="../html/selectPaySS.html">查询调整工资信息</a></li>
+                            <li><a href="../html/deletePaySS.html">删除调整工资信息</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="user">
+                <h3><span class="iconfont icon-yonghu-xianxing"></span>用户管理<span class="iconfont icon-icon-test1" id="down"></span></h3>
+                <ul>
+                    <li><a href="../html/addUser.html">添加普通用户</a></li>
+                    <li><a href="../html/changePSW.html">修改普通用户密码</a></li>
+                    <li><a href="../login.html">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_right">
+            <div class="box_right_top">
+                <p>人事工资基本信息</p>
+                <p>调整工资管理</p>
+                <p>查询调整工资信息</p>
+            </div>
+            <div class="box_right_content">
+                <div class="box_right_contentTop">
+                    <div class="box_right_contentToptop">
+                        <p>查询调整工资信息</p>
+                    </div>
+                    <div class="box_right_contentTopdown">
+                        <p>职员编号</p><input type="text" placeholder=" 请输入正确的职员编号" id="Zno" autocomplete="off">
+                        <button type="button" id="selectPaySSData">确认查询</button>
+                    </div>
+                </div>
+                <table>
+                    <thead id="indexHead">
+                        
+                    </thead>
+                    <tbody id="indexBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="selectPaySSHead">
+        <tr>
+            <th>职员编号</th>
+            <th>交通/通讯等补助</th>
+            <th>迟到/旷工等扣减</th>
+            <th>养老/医疗/失业保险</th>
+            <th>合计应发</th>
+        </tr>
+    </script>
+
+    <script type="text/html" id="selectPaySS">
+        {{each data}}
+            <tr>
+                <td>{{$value.Zno}}</td>
+                <td>{{$value.Subsidy}}</td>
+                <td>{{$value.Deduction}}</td>
+                <td>{{$value.Insure}}</td>
+                <td>{{$value.SS}}</td>
+            </tr>
+        {{/each}}
+    </script>
+
+    <script src="../javascript/selectPaySS.js"></script>
+</body>
+</html>
