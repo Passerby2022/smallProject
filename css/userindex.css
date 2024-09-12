@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.box .box_left{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-height: 100vh;
+    height: auto;
+    background-color: #454959;
+    color: #94a4ae;
+}
+
+.box_left h3{
+    position: relative;
+    font-size: 20px;
+    font-weight: none;
+    padding: 0;
+}
+
+.icon-yonghu-xianxing{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px !important;
+    left: 50px;
+}
+
+.icon-icon-test1{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px !important;
+    right: 10px;
+}
+
+.icon-icon-test{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px !important;
+    right: 10px;
+}
+
+.box_left h3 a{
+    text-decoration: none;
+    color: #94a4ae;
+}
+
+.box_left img{
+    width: 250px;
+    height: 200px;
+}
+
+.select,.user{
+    width: 248px;
+    min-height: 50px;
+    height: auto;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+ul{
+    width: 248px;
+    min-height: 50px;
+    height: auto;
+    display: none;
+}
+
+ul li{
+    border: 1px solid white;
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    background-color: #363947;
+}
+
+ul li a{
+    /*取消a标签默认的下划线*/
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 60px;
+}
+
+.showhide{
+    display: block;
+}
+
+.box .box_right{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.box_right .box_right_top{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    height: 80px;
+    background-color: #454959;
+}
+
+.box_right .box_right_top p{
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    color: #3b82ff;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding: 0 10px;
+}
+
+.box_right .box_right_content{
+    width: 100%;
+    height: auto;
+}
+
+table{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 50px;
+}
+
+table th,td{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+table th{
+    background-color: skyblue;
+}
+
+#color{
+    background-color: aquamarine;
+}
+
+#fontSizeColor{
+    color: red;
+}

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../image/build3.jpg);
+    width: 100%;
+    height: 100vh;
+    /*背景图不平铺*/
+    background-repeat: no-repeat;
+    /*背景图垂直、水平均居中*/
+    background-position: center center;
+    /*背景图不平铺*/
+    background-repeat: no-repeat;
+    /*当内容高度大于图片高度时，背景图像的位置相对于viewport固定*/
+    background-attachment: fixed;
+    /*让背景图基于容器大小伸缩*/
+    background-size: cover;
+	/*超出视图的图片不显示*/
+	overflow: hidden;
+}
+
+.box{
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.8);
+    /*让大盒子在页面中居中*/
+    margin: 200px auto;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    perspective: 400px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+}
+
+.box .box_left{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    /*以下属性用于调试时期存在，正式完成后可删除*/
+}
+
+.box .box_left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.box .box_left span{
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.box .box_right{
+    /*让右盒子在大盒子中居中*/
+    margin: 0 auto;
+}
+/*
+.box .box_right span a{
+    display: none;
+}*/
+
+.box .box_right h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.box .box_right form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.box .box_right .boxform{
+    position: relative;
+    margin-top: 50px;
+}
+
+.box .box_right form input{
+    width: 350px;
+    height: 35px;
+    /*去除input标签的默认边框轮廓*/
+    outline: none;
+}
+
+.box .box_right .boxform span{
+    position: absolute;
+    font-size: 35px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px 10px;
+}
+
+.box .box_right form button{
+    width: 350px;
+    height: 35px;
+    background-color: skyblue;
+    border: 1px solid #111;
+    /*当鼠标放在按钮上时候变成小手的形状*/
+    cursor: pointer;
+    margin-top: 50px;
+}
